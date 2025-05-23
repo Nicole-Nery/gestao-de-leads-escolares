@@ -23,7 +23,7 @@ if modo in ["login", "cadastro"]:
         <style>
             .block-container {
                 padding-top: 5vh;
-                max-width: 700px;
+                max-width: 500px;
                 margin: auto;
             }
         </style>
