@@ -25,5 +25,6 @@ html, body, .stApp * {
 }
 
 .stButton > button:hover {
+    color: white;
     background-color: #2e32c9;  /* Cor um pouco mais escura no hover */
 }
