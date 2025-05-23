@@ -1,7 +1,6 @@
 import streamlit as st
-from db import supabase
-from funcoes_login import *
 from home import show_home
+from funcoes_login import *
 
 st.set_page_config(page_title= "Título", 
                 layout = "wide")
