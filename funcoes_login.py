@@ -40,7 +40,7 @@ def login():
         st.rerun()
 
 
-def cadastrar_novo_usuario(supabase, nome, email, senha):
+def cadastrar_novo_usuario(supabase, nome, cargo, email, senha):
     try:
         # Criptografa a senha
         hashed_password = bcrypt.hashpw(senha.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
@@ -61,6 +61,7 @@ def cadastrar_novo_usuario(supabase, nome, email, senha):
         dados_usuario = {
             "id": user_id,     # usa o mesmo ID do auth
             "nome": nome,
+            "cargo": cargo,
             "email": email,
             "senha": hashed_password
         }
@@ -79,6 +80,7 @@ def cadastro():
         st.header("Cadastro de usuário")
 
         nome = st.text_input("Nome Completo")
+        cargo = st.selectbox("Cargo", ["Secretária", "Diretor", "Coordenador", "Marketing"])
         email = st.text_input("E-mail")
         senha = st.text_input("Senha", type="password")
         confirmar_senha = st.text_input("Confirmar Senha", type="password")
@@ -86,7 +88,7 @@ def cadastro():
         cadastrar = st.form_submit_button("Cadastrar")
 
         if cadastrar:
-            if not nome or not email or not senha or not confirmar_senha:
+            if not nome or not cargo or not email or not senha or not confirmar_senha:
                 st.warning("Por favor, preencha todos os campos.")
             elif senha != confirmar_senha:
                 st.error("As senhas não coincidem.")
@@ -95,7 +97,7 @@ def cadastro():
             else:
                 # Cadastrar no banco de dados
                 try:
-                    sucesso, mensagem = cadastrar_novo_usuario(supabase, nome, email, senha)
+                    sucesso, mensagem = cadastrar_novo_usuario(supabase, nome, cargo, email, senha)
                     if sucesso:
                         st.success(mensagem)
                     else:
