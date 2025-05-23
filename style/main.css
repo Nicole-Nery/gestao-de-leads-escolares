@@ -3,3 +3,11 @@
 html, body, .stApp * {
     font-family: 'Rawline', sans-serif !important;
 }
+
+.login-title {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
