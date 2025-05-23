@@ -86,7 +86,11 @@ def cadastro():
         senha = st.text_input("Senha", type="password")
         confirmar_senha = st.text_input("Confirmar Senha", type="password")
         
+        st.markdown('<div class="custom-button-container">', unsafe_allow_html=True)
+
         cadastrar = st.form_submit_button("Cadastrar")
+
+        st.markdown('</div>', unsafe_allow_html=True)
 
         if cadastrar:
             if not nome or not cargo or not email or not senha or not confirmar_senha:
