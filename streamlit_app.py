@@ -9,7 +9,7 @@ st.set_page_config(page_title= "Título",
 caminho_css = "style/main.css"
 with open(caminho_css) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    
+
 # Modos
 modos_validos = ["login", "cadastro", "home"]
 
@@ -23,7 +23,7 @@ if modo in ["login", "cadastro"]:
         <style>
             .block-container {
                 padding-top: 5vh;
-                max-width: 1000px;
+                max-width: 700px;
                 margin: auto;
             }
         </style>
