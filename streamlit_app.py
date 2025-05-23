@@ -5,9 +5,11 @@ from funcoes_login import *
 st.set_page_config(page_title= "Título", 
                 layout = "wide")
 
-# CSS
-
-
+# Estilo CSS
+caminho_css = "style/main.css"
+with open(caminho_css) as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    
 # Modos
 modos_validos = ["login", "cadastro", "home"]
 
