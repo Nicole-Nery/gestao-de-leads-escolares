@@ -12,12 +12,7 @@ html, body, .stApp * {
     margin-bottom: 30px;
 }
 
-.custom-button-container {
-    width: 300px;        /* Largura do container do botão */
-    margin: 0 auto;      /* Centraliza o container */
-}
-
-.custom-button-container > div.stButton > button {
+.stButton > button {
     width: 100% !important;
     font-size: 18px;
     padding: 12px;
@@ -29,6 +24,6 @@ html, body, .stApp * {
     transition: background-color 0.3s ease;
 }
 
-.custom-button-container > div.stButton > button:hover {
+.stButton > button:hover {
     background-color: #2e32c9;  /* Cor um pouco mais escura no hover */
 }
