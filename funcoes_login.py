@@ -60,7 +60,7 @@ def cadastrar_novo_usuario(supabase, nome, cargo, email, senha):
         # 2. Salva dados adicionais na tabela "usuarios"
         dados_usuario = {
             "id": user_id,     # usa o mesmo ID do auth
-            "nome": nome,
+            "nome_usuario": nome,
             "cargo": cargo,
             "email": email,
             "senha": hashed_password
