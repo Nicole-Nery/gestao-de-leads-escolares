@@ -78,7 +78,7 @@ def cadastrar_novo_usuario(supabase, nome, cargo, email, senha):
 
 def cadastro():      
     with st.form("cadastro_form", border=False):
-        st.header("Cadastro de usuário")
+        st.markdown('<h1 class="login-title">Cadastro de usuário</h1>', unsafe_allow_html=True)
 
         nome = st.text_input("Nome Completo")
         cargo = st.selectbox("Cargo", ["Secretária", "Diretor", "Coordenador", "Marketing"])
@@ -106,7 +106,7 @@ def cadastro():
                 except Exception as e:
                     st.error(f"Erro: {e}")
         st.markdown("---")  
-        voltar_login = st.button("← Voltar para o login")
-        if voltar_login:
-            st.session_state["modo"] = "login"
-            st.rerun()
+    voltar_login = st.button("← Voltar para o login")
+    if voltar_login:
+        st.session_state["modo"] = "login"
+        st.rerun()
