@@ -81,7 +81,7 @@ def cadastro():
         st.markdown('<h1 class="login-title">Cadastro de usuário</h1>', unsafe_allow_html=True)
 
         nome = st.text_input("Nome Completo")
-        cargo = st.selectbox("Cargo", ["Secretária", "Diretor", "Coordenador", "Marketing"])
+        cargo = st.selectbox("Cargo", ["Secretária", "Diretor financeiro", "Diretora Pedagógica", "Coordenadora", "Marketing"])
         email = st.text_input("E-mail")
         senha = st.text_input("Senha", type="password")
         confirmar_senha = st.text_input("Confirmar Senha", type="password")
