@@ -78,7 +78,7 @@ def cadastrar_novo_usuario(supabase, nome, cargo, email, senha):
 
 def cadastro():      
     with st.form("cadastro_form", border=False):
-        st.markdown('<h1 class="login-title">Cadastro de usuário</h1>', unsafe_allow_html=True)
+        st.header("Cadastro de usuário")
 
         nome = st.text_input("Nome Completo")
         cargo = st.selectbox("Cargo", ["Secretária", "Diretor", "Coordenador", "Marketing"])
