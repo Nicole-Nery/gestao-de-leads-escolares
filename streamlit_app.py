@@ -18,12 +18,23 @@ if "modo" not in st.session_state or st.session_state["modo"] not in modos_valid
 
 modo = st.session_state.get("modo", "login")
 
-if modo in ["login", "cadastro"]:
+if modo in ["login"]:
     st.markdown("""
         <style>
             .block-container {
                 padding-top: 5vh;
                 max-width: 500px;
+                margin: auto;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
+if modo in ["cadastro"]:
+    st.markdown("""
+        <style>
+            .block-container {
+                padding-top: 5vh;
+                max-width: 900px;
                 margin: auto;
             }
         </style>
