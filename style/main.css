@@ -11,3 +11,24 @@ html, body, .stApp * {
     font-weight: bold;
     margin-bottom: 30px;
 }
+
+.custom-button-container {
+    width: 300px;        /* Largura do container do botão */
+    margin: 0 auto;      /* Centraliza o container */
+}
+
+.custom-button-container > div.stButton > button {
+    width: 100% !important;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #3a40f4;  /* Sua cor personalizada */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button-container > div.stButton > button:hover {
+    background-color: #2e32c9;  /* Cor um pouco mais escura no hover */
+}
