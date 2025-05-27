@@ -4,9 +4,11 @@ from auth.funcoes_auth import *
 def mostrar_tela_login_ou_cadastro():
     st.markdown("""
         <style>
-        [data-testid="stSidebarNavLink"]::before {
-            content: "";
-            display: none;
+        [data-testid="stSidebarNavLinkContainer"]::before {
+            content: "Gestão de Leads";
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight: bold;
         }
         </style>
     """, unsafe_allow_html=True)
