@@ -4,7 +4,7 @@ from auth.funcoes_auth import *
 def mostrar_tela_login_ou_cadastro():
     st.markdown("""
         <style>
-        [data-testid="stSidebarNavLinkContainer"]::before {
+        [data-testid="stSidebarNavLink" class="st-emotion-cache-pkbazv edtmxes6"]::before {
             content: "Gestão de Leads";
             font-size: 20px;
             margin-left: 10px;
