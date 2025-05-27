@@ -1,6 +1,7 @@
 import streamlit as st
 
 if "usuario" not in st.session_state:
-    st.switch_page("pages/0_🔐_Login.py")
+    st.error("Você precisa estar logado para acessar esta página.")
+    st.stop()
 
 st.title("KPI's")
