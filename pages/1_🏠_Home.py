@@ -7,6 +7,10 @@ if "usuario" not in st.session_state:
 
 usuario = st.session_state["usuario"]
 
+# Estilo CSS
+with open("style/main.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 st.title("🏠 Painel Inicial")
 st.markdown(f"Bem-vindo, **{usuario['nome_usuario']}** ({usuario['cargo']})!")
 
