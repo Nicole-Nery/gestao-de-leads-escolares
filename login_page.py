@@ -37,7 +37,7 @@ def tela_login():
                 usuario_autenticado = autenticar_usuario(email, senha)
                 if usuario_autenticado:
                     st.session_state.usuario = usuario_autenticado
-                    st.experimental_rerun()
+                    st.rerun()
                 else:
                     st.error("E-mail ou senha inválidos.")
 
