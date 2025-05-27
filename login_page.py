@@ -9,13 +9,6 @@ def mostrar_tela_login_ou_cadastro():
             visibility: hidden;
             position: relative;
         }
-
-        [data-testid="stSidebarNav"] [data-testid="stSidebarNavLink"] span::after {
-            content: "Gestão de Leads";
-            visibility: visible;
-            position: absolute;
-            left: 0;
-        }
         </style>
         """, unsafe_allow_html=True)
 
