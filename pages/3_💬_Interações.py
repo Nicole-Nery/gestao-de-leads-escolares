@@ -8,5 +8,4 @@ if "usuario" not in st.session_state:
 with open("style/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.title("Interações")
-
+st.title("KPI's")
