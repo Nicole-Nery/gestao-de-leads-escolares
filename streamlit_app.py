@@ -13,3 +13,5 @@ if "usuario" not in st.session_state:
     mostrar_tela_login_ou_cadastro()
     st.stop()
 
+st.switch_page("pages/1_🏠_Home.py")
+
