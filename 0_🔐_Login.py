@@ -1,6 +1,24 @@
 import streamlit as st
 from auth.funcoes_auth import *
 
+# Oculta a sidebar e o header
+st.markdown("""
+    <style>
+        [data-testid="stSidebar"] { display: none; }
+        [data-testid="stHeader"] { visibility: hidden; }
+        .block-container {
+            padding-top: 5vh;
+            max-width: 500px;
+            margin: auto;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Redireciona se o usuário já estiver logado
+if "usuario" in st.session_state:
+    st.switch_page("pages/1_🏠_Home.py")
+
+# Exibe a tela de login/cadastro
 def mostrar_tela_login_ou_cadastro():
     if "modo" not in st.session_state or st.session_state["modo"] not in ["login", "cadastro"]:
         st.session_state["modo"] = "login"
@@ -85,3 +103,5 @@ def tela_cadastro():
     if st.button("← Voltar para o login"):
         st.session_state["modo"] = "login"
         st.rerun()
+
+mostrar_tela_login_ou_cadastro()
