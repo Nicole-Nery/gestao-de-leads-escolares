@@ -7,8 +7,8 @@ def mostrar_tela_login_ou_cadastro():
     st.markdown("""
         <style>
         /* Oculta o texto da página ativa na sidebar */
-        [data-testid="stSidebarNav"] a[aria-current="page"] span {
-            display: none !important;
+        [data-testid="stSidebarNav"] ul li:first-child a span {
+            display: none;
         }
         </style>
     """, unsafe_allow_html=True)
