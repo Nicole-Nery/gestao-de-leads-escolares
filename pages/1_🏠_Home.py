@@ -1,7 +1,7 @@
 import streamlit as st
 from db import supabase
 
-if "usuario" not in st.session.state:
+if "usuario" not in st.session_state:
     st.warning("Você precisa estar logado para acessar esta página.")
     st.stop()
 
