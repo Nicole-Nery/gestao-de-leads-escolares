@@ -2,8 +2,8 @@ import streamlit as st
 from auth.funcoes_auth import *
 
 def mostrar_tela_login_ou_cadastro():
-    if "modo" not in st.session_state:
-        st.session_state["modo"] == "login"
+    if "modo" not in st.session_state or st.session_state["modo"] not in ["login", "cadastro"]:
+        st.session_state["modo"] = "login"
 
     modo = st.session_state["modo"]
 
