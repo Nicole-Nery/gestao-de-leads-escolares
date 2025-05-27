@@ -19,7 +19,7 @@ def mostrar_tela_login_ou_cadastro():
     }
 
     /* Esconde o texto antigo */
-    [data-testid="stSidebarNav"] ul li:first-child a span > * {
+    [data-testid="stSidebarNavLink"] ul li:first-child a span > * {
         display: none;
     }
     </style>
