@@ -4,7 +4,7 @@ from auth.funcoes_auth import *
 def mostrar_tela_login_ou_cadastro():
     st.markdown("""
         <style>
-        [data-testid="stSidebarNav"]::before {
+        [data-testid="stSidebarNavLink"]::before {
             content: "";
             display: none;
         }
