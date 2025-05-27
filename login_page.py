@@ -7,7 +7,7 @@ def mostrar_tela_login_ou_cadastro():
     st.markdown("""
     <style>
     /* Seleciona o primeiro item da sidebar (normalmente a página atual) */
-    [data-testid="stSidebarNavLink"] ul li:first-child a span {
+    [data-testid="stSidebarNav"] ul li:first-child a span {
         font-weight: bold;
         font-size: 78px;
         color: #000000;
