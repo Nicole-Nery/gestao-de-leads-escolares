@@ -1,14 +1,10 @@
 import streamlit as st
-from home import show_home
-from funcoes_login import *
-from pages.leads import pagina_leads
+from auth.funcoes_login import *
 
-st.set_page_config(page_title= "Título", 
-                layout = "wide")
+st.set_page_config(page_title= "Gestão de Leads", layout = "wide")
 
 # Estilo CSS
-caminho_css = "style/main.css"
-with open(caminho_css) as f:
+with open("style/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Modos
@@ -41,10 +37,7 @@ if modo in ["cadastro"]:
         </style>
     """, unsafe_allow_html=True)
 
-if modo in ["leads"]:
-    pagina_leads()
-
-# Fluxo principal -------
+# Fluxo - Login ou cadastro
 if "usuario" not in st.session_state:
     if st.session_state["modo"] == "login":
         login()
@@ -52,12 +45,4 @@ if "usuario" not in st.session_state:
         cadastro()
     st.stop()
 
-# Exibe a tela de acordo com o modo atual
-if st.session_state["modo"] == "login":
-    login()
-elif st.session_state["modo"] == "cadastro":
-    cadastro()
-elif st.session_state["modo"] == "home":
-    show_home()
-
-usuario = st.session_state.usuario
+st.switch_page("pages/1_🏠_Home.py") 
