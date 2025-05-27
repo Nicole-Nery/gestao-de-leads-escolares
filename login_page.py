@@ -2,7 +2,7 @@ import streamlit as st
 from auth.funcoes_auth import *
 
 def mostrar_tela_login_ou_cadastro():
-    
+    st.sidebar.write("Oi")
 # Corrige nome no menu lateral apenas visualmente
     st.markdown("""
     <style>
