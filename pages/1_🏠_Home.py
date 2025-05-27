@@ -2,7 +2,8 @@ import streamlit as st
 from db import supabase
 
 if "usuario" not in st.session_state:
-    st.switch_page("pages/0_🔐_Login.py")
+    st.error("Você precisa estar logado para acessar esta página.")
+    st.stop()
 
 usuario = st.session_state["usuario"]
 
