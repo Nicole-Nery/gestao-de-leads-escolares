@@ -1,6 +1,5 @@
 import streamlit as st
 from auth.funcoes_auth import *
-from login_page import *
 
 st.set_page_config(page_title= "Gestão de Leads", layout = "wide")
 
@@ -10,8 +9,5 @@ with open("style/main.css") as f:
 
 # Fluxo - Login ou cadastro
 if "usuario" not in st.session_state:
-    mostrar_tela_login_ou_cadastro()
-    st.stop()
+    st.switch_page("0_🔐_Login.py")
 
-# Se já está autenticado, direciona para home
-st.switch_page("pages/1_🏠_Home.py") 
