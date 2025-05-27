@@ -5,12 +5,12 @@ def mostrar_tela_login_ou_cadastro():
     st.sidebar
 # Corrige nome no menu lateral apenas visualmente
     st.markdown("""
-    <style>
-    /* Seleciona o primeiro item da sidebar (a página atual) */
-    [data-testid="stSidebarNav"] ul li:first-child a span {
-        content: "Gestão de Leads";
-    }  
-    </style>
+        <style>
+        /* Oculta o nome da página ativa em qualquer posição da lista */
+        [data-testid="stSidebarNav"] li > a[aria-current="page"] span {
+            display: none;
+        }
+        </style>
     """, unsafe_allow_html=True)
 
     if "modo" not in st.session_state or st.session_state["modo"] not in ["login", "cadastro"]:
