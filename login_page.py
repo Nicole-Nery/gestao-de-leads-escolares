@@ -6,9 +6,9 @@ def mostrar_tela_login_ou_cadastro():
 # Corrige nome no menu lateral apenas visualmente
     st.markdown("""
         <style>
-        /* Oculta o nome da página ativa em qualquer posição da lista */
-        [data-testid="stSidebarNav"] li > a[aria-current="page"] span {
-            display: none;
+        /* Oculta o texto da página ativa na sidebar */
+        [data-testid="stSidebarNav"] a[aria-current="page"] span {
+            display: none !important;
         }
         </style>
     """, unsafe_allow_html=True)
