@@ -9,5 +9,5 @@ with open("style/main.css") as f:
 
 # Fluxo - Login ou cadastro
 if "usuario" not in st.session_state:
-    st.switch_page("0_🔐_Login.py")
+    st.switch_page("Login.py")
 
