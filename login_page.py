@@ -6,15 +6,13 @@ def mostrar_tela_login_ou_cadastro():
 # Corrige nome no menu lateral apenas visualmente
     st.markdown("""
     <style>
-    /* Seleciona o primeiro item da sidebar (normalmente a página atual) */
+    /* Seleciona o primeiro item da sidebar (a página atual) */
     [data-testid="stSidebarNav"] ul li:first-child a span {
-        font-weight: bold;
-        font-size: 12px;
-        color: #000000;
+        display: none;
     }
                 
 
-                
+
     </style>
     """, unsafe_allow_html=True)
 
