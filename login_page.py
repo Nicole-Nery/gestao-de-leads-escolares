@@ -4,10 +4,11 @@ from auth.funcoes_auth import *
 def mostrar_tela_login_ou_cadastro():
     st.markdown("""
         <style>
-        /* Altera o nome do link da página na sidebar */
-        [data-testid="stSidebarNav"] [data-testid="stSidebarNavLink"] span {
-            visibility: hidden;
-            position: relative;
+        [data-testid="stSidebarNav"] [data-testid="stSidebarNavLink"] span::after {
+            content: "Gestão de Leads";
+            visibility: visible;
+            position: absolute;
+            left: 0;
         }
         </style>
         """, unsafe_allow_html=True)
