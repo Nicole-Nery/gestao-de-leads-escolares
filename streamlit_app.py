@@ -1,6 +1,7 @@
 import streamlit as st
 from home import show_home
 from funcoes_login import *
+from pages.leads import pagina_leads
 
 st.set_page_config(page_title= "Título", 
                 layout = "wide")
@@ -11,7 +12,7 @@ with open(caminho_css) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Modos
-modos_validos = ["login", "cadastro", "home"]
+modos_validos = ["login", "cadastro", "home", "leads"]
 
 if "modo" not in st.session_state or st.session_state["modo"] not in modos_validos:
     st.session_state["modo"] = "login"
@@ -39,6 +40,9 @@ if modo in ["cadastro"]:
             }
         </style>
     """, unsafe_allow_html=True)
+
+if modo in ["leads"]:
+    pagina_leads()
 
 # Fluxo principal -------
 if "usuario" not in st.session_state:
