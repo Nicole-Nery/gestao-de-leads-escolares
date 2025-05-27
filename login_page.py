@@ -2,7 +2,7 @@ import streamlit as st
 from auth.funcoes_auth import *
 
 def mostrar_tela_login_ou_cadastro():
-    st.sidebar.write("Oi")
+    st.sidebar
 # Corrige nome no menu lateral apenas visualmente
     st.markdown("""
     <style>
@@ -14,7 +14,7 @@ def mostrar_tela_login_ou_cadastro():
     }
 
     /* Substitui o texto visivelmente */
-    [data-testid="stSidebarNav"] ul li:first-child a span::before {
+    [data-testid="stSidebarNavLink"] ul li:first-child a span::before {
         content: "Gestão de Leads";
     }
 
