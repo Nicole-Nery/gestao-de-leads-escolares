@@ -3,19 +3,22 @@ from auth.funcoes_auth import *
 
 def mostrar_tela_login_ou_cadastro():
     st.markdown("""
-            <style>
-            [data-testid="stSidebarNavLink"] ul li:first-child a span {
-                visibility: hidden;
-                position: relative;
-            }
-            [data-testid="stSidebarNavLink"] ul li:first-child a span::after {
-                content: "-";
-                visibility: visible;
-                position: absolute;
-                left: 0;
-            }
-            </style>
+        <style>
+        /* Altera o nome do link da página na sidebar */
+        [data-testid="stSidebarNav"] [data-testid="stSidebarNavLink"] span {
+            visibility: hidden;
+            position: relative;
+        }
+
+        [data-testid="stSidebarNav"] [data-testid="stSidebarNavLink"] span::after {
+            content: "Gestão de Leads";
+            visibility: visible;
+            position: absolute;
+            left: 0;
+        }
+        </style>
         """, unsafe_allow_html=True)
+
     
     if "modo" not in st.session_state or st.session_state["modo"] not in ["login", "cadastro"]:
         st.session_state["modo"] = "login"
