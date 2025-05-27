@@ -8,11 +8,8 @@ def mostrar_tela_login_ou_cadastro():
     <style>
     /* Seleciona o primeiro item da sidebar (a página atual) */
     [data-testid="stSidebarNav"] ul li:first-child a span {
-        display: none;
-    }
-                
-
-
+        content: "Gestão de Leads";
+    }  
     </style>
     """, unsafe_allow_html=True)
 
