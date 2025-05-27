@@ -3,15 +3,19 @@ from auth.funcoes_auth import *
 
 def mostrar_tela_login_ou_cadastro():
     st.markdown("""
-        <style>
-        [data-testid="stSidebarNavLink" class="st-emotion-cache-pkbazv edtmxes6"]::before {
-            content: "Gestão de Leads";
-            font-size: 20px;
-            margin-left: 10px;
-            font-weight: bold;
-        }
-        </style>
-    """, unsafe_allow_html=True)
+            <style>
+            [data-testid="stSidebarNavLink"] ul li:first-child a span {
+                visibility: hidden;
+                position: relative;
+            }
+            [data-testid="stSidebarNavLink"] ul li:first-child a span::after {
+                content: "-";
+                visibility: visible;
+                position: absolute;
+                left: 0;
+            }
+            </style>
+        """, unsafe_allow_html=True)
     
     if "modo" not in st.session_state or st.session_state["modo"] not in ["login", "cadastro"]:
         st.session_state["modo"] = "login"
