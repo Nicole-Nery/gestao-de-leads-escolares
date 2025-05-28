@@ -1,5 +1,6 @@
 from pathlib import Path
 import streamlit as st
+from login_page import *
 
 def conexao_e_cabecalho():
     if "usuario" not in st.session_state:
@@ -12,6 +13,7 @@ def conexao_e_cabecalho():
     with st.sidebar:
         if st.button("🚪 Sair"):
             st.session_state.clear()
+            mostrar_tela_login_ou_cadastro()
             st.rerun()
 
     # Caminhos absolutos baseados na raiz do projeto
