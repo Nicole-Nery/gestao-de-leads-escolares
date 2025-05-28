@@ -10,11 +10,6 @@ st.set_page_config(page_title= "Funil Inteligente",
 with open("style/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# Detectando se o usuário clicou em Sair
-if st.session_state.get("logout"):
-    st.session_state.clear()
-    st.rerun()
-
 # Fluxo - Login ou cadastro
 if "usuario" not in st.session_state:
     mostrar_tela_login_ou_cadastro()
