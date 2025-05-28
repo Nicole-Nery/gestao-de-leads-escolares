@@ -13,8 +13,7 @@ with open("style/main.css") as f:
 # Detectando se o usuário clicou em Sair
 if st.session_state.get("logout"):
     st.session_state.clear()
-    mostrar_tela_login_ou_cadastro()
-    st.stop()
+    st.rerun()
 
 # Fluxo - Login ou cadastro
 if "usuario" not in st.session_state:
