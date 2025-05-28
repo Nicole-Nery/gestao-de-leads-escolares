@@ -23,5 +23,7 @@ with tabs_leads[0]:
         idade = st.number_input("Idade", min_value=0)
         escola_origem = st.text_input("Nome do aluno")
 
+        submit = st.form_submit_button("Cadastrar Lead")
+
 
 
