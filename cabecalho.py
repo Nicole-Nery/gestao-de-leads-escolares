@@ -1,3 +1,4 @@
+from pathlib import Path
 import streamlit as st
 
 def conexao_e_cabecalho():
@@ -7,15 +8,19 @@ def conexao_e_cabecalho():
 
     usuario = st.session_state["usuario"]
 
-    # Estilo CSS
-    with open("style/main.css") as f:
+    # Caminhos absolutos baseados na raiz do projeto
+    raiz = Path(__file__).parent
+    css_path = raiz / "style" / "main.css"
+    logo_path = raiz / "assets" / "logo-sigah.svg"
+
+    with open(css_path) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
     with st.container():
         st.markdown('<div class="fixed-header">', unsafe_allow_html=True)
         col1, col2 = st.columns([1,5])
         with col1:
-            st.image('../assets/logo-sigah.svg', width=300)
+            st.image(str(logo_path), width=300)
         with col2:
             st.html("<div class='header-title'>Sistema Integrado de Gestão de Atas Hospitalares</div>")
         st.markdown('</div>', unsafe_allow_html=True)
