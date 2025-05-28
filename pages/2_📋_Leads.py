@@ -4,7 +4,7 @@ from cabecalho import *
 
 conexao_e_cabecalho()
 
-st.subheader("Gerenciamento de Leads")
+st.header("Gerenciamento de Leads")
 
 tabs_leads = st.tabs(["Cadastrar", "Visualizar", "Atualizar", "Excluir"])
 
