@@ -13,6 +13,11 @@ html, body, .stApp * {
     margin-bottom: 30px;
 }
 
+.header-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
 .stButton > button {
     width: 100% !important;
     font-size: 18px;
