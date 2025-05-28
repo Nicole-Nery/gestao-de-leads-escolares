@@ -7,10 +7,10 @@ conexao_e_cabecalho()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.page_link("pages/2_📋_Leads.py", label="Gerenciar Leads", icon="📋")
+    st.link_button("📋 Cadastrar Lead", url="/pages/2_📋_Leads")
 
 with col2:
-    st.page_link("pages/3_💬_Interações.py", label="Histórico de Interações", icon="💬")
+    st.link_button("💬 Histórico de Interações", url="/pages/3_💬_Interações")
 
 with col3:
-    st.page_link("pages/4_📊_KPIs.py", label="Painel de KPIs", icon="📊")
+    st.link_button("📊 Painel de KPIs", url="/pages/4_📊_KPIs")
