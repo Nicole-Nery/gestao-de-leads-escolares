@@ -13,8 +13,8 @@ def conexao_e_cabecalho():
     with st.sidebar:
         if st.button("🚪 Sair"):
             st.session_state.clear()
-            mostrar_tela_login_ou_cadastro()
             st.rerun()
+            mostrar_tela_login_ou_cadastro()
 
     # Caminhos absolutos baseados na raiz do projeto
     raiz = Path(__file__).parent
