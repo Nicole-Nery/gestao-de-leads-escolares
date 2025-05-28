@@ -9,10 +9,11 @@ def conexao_e_cabecalho():
     usuario = st.session_state["usuario"]
 
     # Botão de sair
-    st.markdown("---")
-    if st.button("🚪 Sair"):
-        st.session_state.clear()
-        st.rerun()
+    with st.sidebar:
+        st.markdown("---")
+        if st.button("🚪 Sair"):
+            st.session_state.clear()
+            st.rerun()
 
     # Caminhos absolutos baseados na raiz do projeto
     raiz = Path(__file__).parent
