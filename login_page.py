@@ -3,16 +3,6 @@ from auth.funcoes_auth import *
 
 def mostrar_tela_login_ou_cadastro():
     # Corrige nome no menu lateral apenas visualmente
-    '''
-    st.markdown("""
-        <style>
-        /* Oculta o texto da página ativa na sidebar */
-        [data-testid="stSidebarNav"] ul li:first-child a span {
-            display: none;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-    '''
 
     if "modo" not in st.session_state or st.session_state["modo"] not in ["login", "cadastro"]:
         st.session_state["modo"] = "login"
