@@ -14,14 +14,3 @@ with col2:
 
 with col3:
     st.page_link("pages/4_📊_KPIs.py", label="📊 Painel de KPIs", icon="📊")
-
-# Adicionais no rodapé
-st.markdown("### 📈 Em breve:")
-st.markdown("- Funil de conversão")
-st.markdown("- Alertas automáticos")
-st.markdown("- Tarefas pendentes")
-
-st.markdown("---")
-if st.button("🚪 Sair"):
-    st.session_state.clear()
-    st.rerun()
