@@ -11,9 +11,8 @@ def conexao_e_cabecalho():
 
     # Botão de sair
     with st.sidebar:
-        st.write("Logout flag:", st.session_state.get("logout"))
         if st.button("🚪 Sair"):
-            st.session_state["logout"] = True
+            st.session_state.clear()
             st.rerun()
 
     # Caminhos absolutos baseados na raiz do projeto
