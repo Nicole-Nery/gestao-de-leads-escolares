@@ -2,7 +2,9 @@ import streamlit as st
 from auth.funcoes_auth import *
 from login_page import *
 
-st.set_page_config(page_title= "Gestão de Leads", layout = "wide")
+st.set_page_config(page_title= "Funil Inteligente", 
+                page_icon= ("../assets/icon.svg"), 
+                layout = "wide")
 
 # Estilo CSS
 with open("style/main.css") as f:
