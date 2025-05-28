@@ -18,6 +18,13 @@ html, body, .stApp * {
     font-weight: bold;
 }
 
+.stMainBlockContainer {
+    padding-top:3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+
 /* Estilo unificado para botões normais e botões de link */
 .stButton > button,
 .stLinkButton > a {
