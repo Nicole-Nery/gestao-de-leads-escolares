@@ -14,23 +14,28 @@ html, body, .stApp * {
 }
 
 .header-title {
-    font-size: 2em;
+    font-size: 2.4em;
     font-weight: bold;
 }
 
-.stButton > button {
+/* Estilo unificado para botões normais e botões de link */
+.stButton > button,
+.stLinkButton > a {
     width: 100% !important;
     font-size: 18px;
     padding: 12px;
     border-radius: 8px;
-    background-color: #3a40f4;  /* Sua cor personalizada */
-    color: white;
+    background-color: #3a40f4;
+    color: white !important;
     border: none;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.stButton > button:hover {
-    color: white;
-    background-color: #2e32c9;  /* Cor um pouco mais escura no hover */
+.stButton > button:hover,
+.stLinkButton > a:hover {
+    background-color: #2e32c9;
+    color: white !important;
 }
