@@ -4,6 +4,15 @@ from login_page import *
 
 st.set_page_config(page_title= "Gestão de Leads", layout = "wide")
 
+st.markdown("""
+        <style>
+        /* Oculta o texto da página ativa na sidebar */
+        [data-testid="stSidebarNav"] ul li:first-child a span {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
 # Estilo CSS
 with open("style/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
