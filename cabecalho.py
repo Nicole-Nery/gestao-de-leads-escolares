@@ -8,6 +8,12 @@ def conexao_e_cabecalho():
 
     usuario = st.session_state["usuario"]
 
+    # Botão de sair
+    st.markdown("---")
+    if st.button("🚪 Sair"):
+        st.session_state.clear()
+        st.rerun()
+
     # Caminhos absolutos baseados na raiz do projeto
     raiz = Path(__file__).parent
     css_path = raiz / "style" / "main.css"
@@ -22,7 +28,7 @@ def conexao_e_cabecalho():
         with col1:
             st.image(str(logo_path), width=300)
         with col2:
-            st.html("<div class='header-title'>Sistema Integrado de Gestão de Atas Hospitalares</div>")
+            st.html("<div class='header-title'>Funil Inteligente de Leads</div>")
         st.markdown('</div>', unsafe_allow_html=True)
         st.markdown(f"Bem-vindo, **{usuario['nome_usuario']}** ({usuario['cargo']})!")
 
