@@ -10,7 +10,6 @@ def conexao_e_cabecalho():
 
     # Botão de sair
     with st.sidebar:
-        st.markdown("---")
         if st.button("🚪 Sair"):
             st.session_state.clear()
             st.rerun()
