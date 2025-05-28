@@ -5,18 +5,9 @@ def mostrar_tela_login_ou_cadastro():
     # Corrige nome no menu lateral apenas visualmente
     st.markdown("""
         <style>
-        /* Define um ID temporário para o primeiro item da sidebar */
+        /* Oculta o texto da página ativa na sidebar */
         [data-testid="stSidebarNav"] ul li:first-child a span {
-            visibility: hidden;
-            position: relative;
-        }
-
-        [data-testid="stSidebarNav"] ul li:first-child a span::after {
-            content: "Novo Nome";
-            visibility: visible;
-            position: absolute;
-            left: 0;
-            top: 0;
+            display: none;
         }
         </style>
     """, unsafe_allow_html=True)
