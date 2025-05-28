@@ -17,11 +17,10 @@ with tabs_leads[0]:
 
         st.markdown("---")
 
-
         st.subheader("📌 Informações do Aluno")
         nome = st.text_input("Nome do aluno")
         idade = st.number_input("Idade", min_value=0)
-        escola_origem = st.text_input("Nome do aluno")
+        escola_origem = st.text_input("Escola de origem")
 
         submit = st.form_submit_button("Cadastrar Lead")
 
