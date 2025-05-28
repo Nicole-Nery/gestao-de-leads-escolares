@@ -12,9 +12,8 @@ def conexao_e_cabecalho():
     # Botão de sair
     with st.sidebar:
         if st.button("🚪 Sair"):
-            st.session_state.clear()
+            st.session_state["logout"] = True
             st.rerun()
-            mostrar_tela_login_ou_cadastro()
 
     # Caminhos absolutos baseados na raiz do projeto
     raiz = Path(__file__).parent
