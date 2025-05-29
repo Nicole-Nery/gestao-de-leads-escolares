@@ -27,8 +27,8 @@ with tabs_leads[0]:
         st.markdown("---")
         
         st.html("<div class='subsubtitle'>Informações do status do Lead</div>")
-        status_atual = st.selectbox("Etapa atual do Lead", placeholder="Selecione")
-        responsavel_nome = st.selectbox("Profissional Responsável", placeholder="Selecione")
+        status_atual = st.selectbox("Etapa atual do Lead", ["A", "B", "C"],placeholder="Selecione")
+        responsavel_nome = st.selectbox("Profissional Responsável", ["Fulano", "Ciclano", "Beltrano"], placeholder="Selecione")
         lead_finalizado = st.radio("Lead finalizado?",["Sim", "Não"],horizontal=True)
 
         consentimento_lgpd = st.checkbox("O responsável declara estar ciente e de acordo com o uso dos dados fornecidos para fins de contato, registro e comunicação institucional, conforme a Lei Geral de Proteção de Dados (LGPD).")
