@@ -36,6 +36,6 @@ def conexao_e_cabecalho():
         st.markdown(f"Bem-vindo, **{usuario['nome_usuario']}** ({usuario['cargo']})!")'''
     
     st.html("<div class='header-title'>Sistema Integrado de Gestão de Atas Hospitalares</div>")
-    st.markdown(f"Bem-vindo, **{usuario['nome_usuario']}** ({usuario['cargo']})!")
+    st.markdown(f"Olá, **{usuario['nome_usuario']}** ({usuario['cargo']})!")
 
     st.markdown("---")
