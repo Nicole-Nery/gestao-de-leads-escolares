@@ -4,11 +4,11 @@ from cabecalho import *
 
 conexao_e_cabecalho()
 
-col1, col2 = st.columns([4,1])
+col1, col2 = st.columns([5,1])
 
 with col1:
     st.write("Olá")
 
 with col2:
-    st.page_link("pages/2_📋_Leads.py", label="Cadastrar novo lead", icon=":material/add:")
+    st.page_link("pages/2_📋_Leads.py", label="Cadastrar lead", icon=":material/add:")
     
