@@ -12,6 +12,7 @@ with tabs_leads[0]:
     with st.form("form_cadastro_leads", clear_on_submit=True):
         st.html("<div class='subsubtitle'>Informações do responsável</div>")
         nome_responsavel = st.text_input("Nome do responsável")
+        grau_parentesco = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True)
         telefone = st.text_input("Telefone de contato")
         email = st.text_input("E-mail")
         profissao = st.text_input("Profissão")
@@ -34,7 +35,7 @@ with tabs_leads[0]:
         observacoes = st.text_area("Observações")
 
         st.markdown("---")
-        
+
         consentimento_lgpd = st.checkbox("O responsável declara estar ciente e de acordo com o uso dos dados fornecidos para fins de contato, registro e comunicação institucional, conforme a Lei Geral de Proteção de Dados (LGPD).")
 
         submit = st.form_submit_button("Cadastrar Lead")
