@@ -10,5 +10,5 @@ with col1:
     st.write("Olá")
 
 with col2:
-    st.page_link("2_📋_Leads.py", label="Cadastrar Lead")
+    st.page_link("pages/2_📋_Leads.py", label="Cadastrar Lead")
     
