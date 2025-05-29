@@ -57,6 +57,14 @@ html, body, .stApp * {
     color: white !important;
 }
 
+.block-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Colunas horizontais: remove padding/margem extra */
 .stHorizontalBlock {
-    padding-right: 0%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
 }
