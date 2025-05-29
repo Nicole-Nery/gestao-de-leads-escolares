@@ -10,4 +10,4 @@ with col1:
     st.write("Olá")
 
 with col2:
-    st.page_link("/pages/2_📋_Leads.py", label="Cadastrar Lead", icon="➕", new_tab=False)
+    st.page_link("2_📋_Leads", label="Cadastrar Lead", icon="➕", new_tab=False)
