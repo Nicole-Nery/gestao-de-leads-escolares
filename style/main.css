@@ -56,3 +56,7 @@ html, body, .stApp * {
     background-color: #2e32c9;
     color: white !important;
 }
+
+.stHorizontalBlock {
+    padding-right: 0%;
+}
