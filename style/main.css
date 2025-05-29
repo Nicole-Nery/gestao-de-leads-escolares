@@ -20,11 +20,12 @@ html, body, .stApp * {
 
 .subtitle {
     font-size: 1.8em;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .subsubtitle {
     font-size: 1.4em;
+    font-weight: 600;
 }
 
 .stMainBlockContainer {
