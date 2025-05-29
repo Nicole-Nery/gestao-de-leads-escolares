@@ -35,7 +35,7 @@ def conexao_e_cabecalho():
         st.title("Funil Inteligente de Leads Escolares")
         st.markdown(f"Bem-vindo, **{usuario['nome_usuario']}** ({usuario['cargo']})!")'''
     
-    st.title("Funil Inteligente de Leads Escolares")
+    st.html("<div class='header-title'>Sistema Integrado de Gestão de Atas Hospitalares</div>")
     st.markdown(f"Bem-vindo, **{usuario['nome_usuario']}** ({usuario['cargo']})!")
 
     st.markdown("---")
