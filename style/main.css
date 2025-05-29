@@ -57,11 +57,11 @@ html, body, .stApp * {
     color: white !important;
 }
 
-/* Container de colunas sem padding lateral */
+/* Container de colunas sem padding lateral 
 .block-container {
     padding-left: 0 !important;
     padding-right: 0 !important;
-}
+}*/
 .stHorizontalBlock {
     padding-left: 0 !important;
     padding-right: 0 !important;
