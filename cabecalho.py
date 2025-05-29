@@ -38,6 +38,6 @@ def conexao_e_cabecalho():
     st.html("<div class='header-title'>Funil Inteligente de Leads Escolares</div>")
     
     st.markdown(f"""<p style='margin-bottom:0;'><strong>Escola Colibri</strong></p>""", unsafe_allow_html=True)
-    st.markdown(f"Olá, **{usuario['nome_usuario']}** ({usuario['cargo']})!")
+    st.markdown(f"Olá, {usuario['nome_usuario']}!")
 
     st.markdown("---")
