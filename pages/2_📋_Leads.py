@@ -31,6 +31,10 @@ with tabs_leads[0]:
         responsavel_nome = st.selectbox("Profissional responsável por essa etapa", ["Fulano", "Ciclano", "Beltrano"], placeholder="Selecione")
         lead_finalizado = st.radio("Lead finalizado?",["Não", "Sim"], horizontal=True)
 
+        observacoes = st.text_area("Observações")
+
+        st.markdown("---")
+        
         consentimento_lgpd = st.checkbox("O responsável declara estar ciente e de acordo com o uso dos dados fornecidos para fins de contato, registro e comunicação institucional, conforme a Lei Geral de Proteção de Dados (LGPD).")
 
         submit = st.form_submit_button("Cadastrar Lead")
