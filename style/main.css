@@ -40,6 +40,13 @@ html, body, .stApp * {
     transition: background-color 0.3s ease;
 }
 
+/* Garante que o texto dentro do link fique branco */
+.stPageLink a p {
+    color: white !important;
+    margin: 0; /* remove espaços indesejados */
+    font-weight: 500;
+}
+
 .stPageLink a:hover,
 .stButton > button:hover {
     background-color: #2e32c9;
