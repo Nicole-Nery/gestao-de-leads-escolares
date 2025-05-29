@@ -18,6 +18,15 @@ html, body, .stApp * {
     font-weight: bold;
 }
 
+.subtitle {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.subsubtitle {
+    font-size: 1.4em;
+}
+
 .stMainBlockContainer {
     padding-top:3%;
     padding-bottom: 5%;
