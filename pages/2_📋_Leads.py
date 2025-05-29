@@ -25,8 +25,8 @@ with tabs_leads[0]:
         serie_interesse = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione")
 
         st.markdown("---")
-
-        st.html("<div class='subsubtitle>Informações do status do Lead</div>")
+        
+        st.html("<div class='subsubtitle'>Informações do status do Lead</div>")
         status_atual = st.selectbox("Etapa atual do Lead", placeholder="Selecione")
         responsavel_nome = st.selectbox("Profissional Responsável", placeholder="Selecione")
         lead_finalizado = st.radio("Lead finalizado?",["Sim", "Não"],horizontal=True)
@@ -35,11 +35,11 @@ with tabs_leads[0]:
 
         submit = st.form_submit_button("Cadastrar Lead")
 
-    if submit:
-        if consentimento_lgpd:
-            st.success("Lead cadastrado com sucesso.")
-        else:
-            st.error("É necessário o consentimento LGPD para prosseguir.")
+        if submit:
+            if consentimento_lgpd:
+                st.success("Lead cadastrado com sucesso.")
+            else:
+                st.error("É necessário o consentimento LGPD para prosseguir.")
 
 
 
