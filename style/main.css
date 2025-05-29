@@ -23,13 +23,10 @@ html, body, .stApp * {
     padding-bottom: 5%;
 }
 
-/* Estilo unificado para botões normais e page_link */
+/* Estilo unificado para botões e page_link */
 .stButton > button,
 .stPageLink a {
-    display: flex !important;             /* Coloca ícone e texto lado a lado */
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.5rem !important;               /* Espaço entre ícone e texto */
+    display: block;
     width: 100% !important;
     font-size: 18px;
     padding: 12px;
@@ -41,21 +38,22 @@ html, body, .stApp * {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0 !important;
 }
 
-/* Hover */
-.stButton > button:hover,
-.stPageLink a:hover {
-    background-color: #2e32c9;
-    color: white !important;
-}
-
-/* Ícone branco */
-.stPageLink svg,
+/* Garante que texto e ícones fiquem brancos */
+.stPageLink a span,
+.stPageLink a p,
+.stPageLink a svg,
 .stPageLink .stIcon,
-.stPageLink .stIconMaterial {
+.stPageLink .stIcon svg,
+.stPageLink .stIconMaterial {   
+    color: white !important;
     fill: white !important;
+}
+
+.stPageLink a:hover,
+.stButton > button:hover {
+    background-color: #2e32c9;
     color: white !important;
 }
 
