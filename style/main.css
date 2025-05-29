@@ -25,7 +25,7 @@ html, body, .stApp * {
 
 /* Estilo unificado para botões normais e botões de link */
 .stButton > button,
-.stPageLink > a {
+.stPageLink button {
     width: 100% !important;
     font-size: 18px;
     padding: 12px;
@@ -40,7 +40,7 @@ html, body, .stApp * {
 }
 
 .stButton > button:hover,
-.stPageLink > a:hover {
+.stPageLink button:hover {
     background-color: #2e32c9;
     color: white !important;
 }
