@@ -4,7 +4,7 @@ from cabecalho import *
 
 conexao_e_cabecalho()
 
-col1, col2 = st.columns([4,1])
+col1, col2 = st.columns([4,2])
 
 with col1:
     st.write("Olá")
