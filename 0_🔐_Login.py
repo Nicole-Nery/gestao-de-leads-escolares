@@ -1,13 +1,18 @@
 import streamlit as st
-from db import supabase
-from cabecalho import *
+from auth.funcoes_auth import *
+from login_page import *
 
-conexao_e_cabecalho()
+st.set_page_config(page_title= "Funil Inteligente", 
+                page_icon= ("../assets/icon.svg"), 
+                layout = "wide")
 
-col1, col2 = st.columns([4,1])
+# Estilo CSS
+with open("style/main.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-with col1:
-    st.write("Olá")
+# Fluxo - Login ou cadastro
+if "usuario" not in st.session_state:
+    mostrar_tela_login_ou_cadastro()
+    st.stop()
 
-with col2:
-    st.link_button("📋 Gerenciar Leads", url="https://colibri-crm.streamlit.app/Leads")
+st.switch_page("pages/1_🏠_Home.py")
