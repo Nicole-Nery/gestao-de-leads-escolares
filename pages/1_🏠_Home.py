@@ -10,4 +10,5 @@ with col1:
     st.write("Olá")
 
 with col2:
-    st.link_button("📋 Gerenciar Leads", url="https://colibri-crm.streamlit.app/Leads")
+    st.page_link("pages/2_📋_Leads", label="Cadastrar Lead")
+    
