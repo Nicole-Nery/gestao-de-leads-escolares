@@ -46,7 +46,7 @@ html, body, .stApp * {
 .stPageLink a svg,
 .stPageLink .stIcon,
 .stPageLink .stIcon svg,
-.stPageLink .stIconMaterial {
+.stPageLink .stIconMaterial {   
     color: white !important;
     fill: white !important;
 }
@@ -58,9 +58,9 @@ html, body, .stApp * {
 }
 
 .stPageLink a {
-    padding-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .stPageLink a:hover {
-    padding-left: 0 !important;  
+    margin-right: 0 !important;
 }
