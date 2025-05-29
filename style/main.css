@@ -1,32 +1,10 @@
-@import url('https://fonts.cdnfonts.com/css/rawline');
-
-/*
-html, body, .stApp * {
-    font-family: 'Rawline', sans-serif !important;
-}*/
-
-.login-title {
-    font-size: 60px;
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.header-title {
-    font-size: 2.4em;
-    font-weight: bold;
-}
-
-.stMainBlockContainer {
-    padding-top:3%;
-    padding-bottom: 5%;
-}
-
-/* Estilo unificado para botões e page_link */
+/* Estilo unificado para botões normais e page_link */
 .stButton > button,
 .stPageLink a {
-    display: block;
+    display: flex !important;             /* Coloca ícone e texto lado a lado */
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;               /* Espaço entre ícone e texto */
     width: 100% !important;
     font-size: 18px;
     padding: 12px;
@@ -38,29 +16,31 @@ html, body, .stApp * {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 0 !important;
 }
 
-/* Garante que texto e ícones fiquem brancos */
-.stPageLink a span,
-.stPageLink a p,
-.stPageLink a svg,
-.stPageLink .stIcon,
-.stPageLink .stIcon svg,
-.stPageLink .stIconMaterial {   
-    color: white !important;
-    fill: white !important;
-}
-
-.stPageLink a:hover,
-.stButton > button:hover {
+/* Hover */
+.stButton > button:hover,
+.stPageLink a:hover {
     background-color: #2e32c9;
     color: white !important;
 }
 
-.stPageLink a {
-    margin-right: 0 !important;
+/* Ícone branco */
+.stPageLink svg,
+.stPageLink .stIcon,
+.stPageLink .stIconMaterial {
+    fill: white !important;
+    color: white !important;
 }
 
-.stPageLink a:hover {
-    margin-right: 0 !important;
+/* Container de colunas sem padding lateral */
+.block-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.stHorizontalBlock {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
 }
