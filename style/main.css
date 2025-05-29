@@ -57,9 +57,10 @@ html, body, .stApp * {
     color: white !important;
 }
 
-/* Colunas horizontais: remove padding/margem extra */
-.stHorizontalBlock {
+.stPageLink a {
     padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin: 0 !important;
+}
+
+.stPageLink a:hover {
+    padding-left: 0 !important;  
 }
