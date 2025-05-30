@@ -18,6 +18,7 @@ with tabs_leads[0]:
         nome_responsavel = st.text_input("Nome do responsável")
         grau_parentesco = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True)
         telefone = st.text_input("Telefone de contato")
+        telefone_formatado = formatar_telefone(telefone)
         email = st.text_input("E-mail")
         profissao = st.text_input("Profissão")
 
@@ -28,8 +29,9 @@ with tabs_leads[0]:
         idade_aluno = st.number_input("Idade", min_value=0)
         data_nascimento_aluno = st.date_input("Data de nascimento", format="DD/MM/YYYY")
         escola_atual = st.text_input("Escola atual")
-        serie_interesse = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione")
-        especialista_acompanhante = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], horizontal=True, placeholder="Selecione")
+        serie_interesse = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"])
+        especialista_acompanhante = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"])
+        diagnostico = st.text_area("Tem algum diagnóstico? Especifique.")
 
         st.markdown("---")
         
@@ -49,7 +51,7 @@ with tabs_leads[0]:
         dict_leads = {
             "nome_responsavel": nome_responsavel,
             "grau_parentesco": grau_parentesco,
-            "telefone": telefone,
+            "telefone": telefone_formatado,
             "email": email,
             "profissao": profissao,
             "nome_aluno": nome_aluno,
