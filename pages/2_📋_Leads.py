@@ -1,6 +1,10 @@
 import streamlit as st
 from db import supabase
 from cabecalho import *
+from funcoes_crud import *
+from funcoes_formatacao import *
+import datetime
+import pandas as pd
 
 conexao_e_cabecalho()
 
@@ -20,23 +24,47 @@ with tabs_leads[0]:
         st.markdown("---")
 
         st.html("<div class='subsubtitle'>Informações do aluno</div>")
-        nome = st.text_input("Nome do aluno")
-        idade = st.number_input("Idade", min_value=0)
-        escola_origem = st.text_input("Escola de origem")
+        nome_aluno = st.text_input("Nome do aluno")
+        idade_aluno = st.number_input("Idade", min_value=0)
+        data_nascimento_aluno = st.date_input("Data de nascimento", format="DD/MM/YYYY")
+        escola_atual = st.text_input("Escola atual")
         serie_interesse = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione")
+        especialista_acompanhante = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], horizontal=True, placeholder="Selecione")
 
         st.markdown("---")
         
         st.html("<div class='subsubtitle'>Informações do status do Lead</div>")
-        status_atual = st.selectbox("Etapa atual do Lead", ["A", "B", "C"],placeholder="Selecione")
+        canal_origem = st.selectbox("Por onde o Lead conheceu a Escola Colibri?", ["Instagram", "WhatsApp", "Facebook", "Linkedin", "Indicação", "Fachada (Passando pela rua)"], placeholder="Selecione")
+        status_atual = st.selectbox("Etapa atual do Lead", ["A", "B", "C"], placeholder="Selecione")
         responsavel_nome = st.selectbox("Profissional responsável por essa etapa", ["Fulano", "Ciclano", "Beltrano"], placeholder="Selecione")
-        lead_finalizado = st.radio("Lead finalizado?",["Não", "Sim"], horizontal=True)
+        lead_finalizado = st.radio("Matrícula realizada?", ["Não", "Sim"], horizontal=True)
 
         observacoes = st.text_area("Observações")
 
         st.markdown("---")
 
         consentimento_lgpd = st.checkbox("O responsável declara estar ciente e de acordo com o uso dos dados fornecidos para fins de contato, registro e comunicação institucional, conforme a Lei Geral de Proteção de Dados (LGPD).")
+
+        # Criar o dicionário com os dados
+        dict_leads = {
+            "nome_responsavel": nome_responsavel,
+            "grau_parentesco": grau_parentesco,
+            "telefone": telefone,
+            "email": email,
+            "profissao": profissao,
+            "nome_aluno": nome_aluno,
+            "idade_aluno": idade_aluno,
+            "data_nascimento_aluno": str(data_nascimento_aluno),
+            "escola_atual": escola_atual,
+            "serie_interesse": serie_interesse,
+            "canal_origem": canal_origem,
+            "status_atual": status_atual,
+            "responsavel_nome": responsavel_nome,
+            "lead_finalizado": lead_finalizado == "Sim", 
+            "observacoes": observacoes,
+            "consentimento_lgpd": consentimento_lgpd,
+            "data_cadastro": str(datetime.date.today()) 
+        }
 
         submit = st.form_submit_button("Cadastrar Lead")
 
@@ -45,6 +73,12 @@ with tabs_leads[0]:
                 st.success("Lead cadastrado com sucesso.")
             else:
                 st.error("É necessário o consentimento LGPD para prosseguir.")
+
+with tabs_leads[1]:
+    leads_result = buscar_registro("leads", "nome_aluno")
+    df_leads = pd.DataFrame(leads_result)
+    df_leads = df_leads.drop(columns=["id"])
+    st.dataframe(df_leads, height=500)
 
 
 
