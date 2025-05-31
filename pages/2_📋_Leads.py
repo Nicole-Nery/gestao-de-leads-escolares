@@ -180,7 +180,11 @@ with tabs_leads[0]:
 
         if submit:
             if consentimento_lgpd:
-                st.success("Lead cadastrado com sucesso.")
+                try:
+                    cadastrar_registro("leads", dict_leads)
+                    st.success("Lead cadastrado com sucesso.")
+                except Exception as e:
+                    st.error(f"Erro ao cadastrar Lead: {e}")
             else:
                 st.error("É necessário o consentimento LGPD para prosseguir.")
 
