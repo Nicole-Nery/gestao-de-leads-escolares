@@ -13,7 +13,7 @@ st.html("<div class='subtitle'>Gerenciamento de Leads</div>")
 tabs_leads = st.tabs(["Cadastrar", "Visualizar", "Atualizar", "Excluir"])
 
 with tabs_leads[0]:
-    with st.form("form_cadastro_leads", clear_on_submit=True):
+    with st.form("form_cadastro_leads", clear_on_submit=False):
         st.html("<div class='subsubtitle'>Informações do responsável 1</div>")
         col1, col2 = st.columns([2,1])
         with col1:
