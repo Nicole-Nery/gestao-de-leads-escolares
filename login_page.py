@@ -2,8 +2,6 @@ import streamlit as st
 from auth.funcoes_auth import *
 
 def mostrar_tela_login_ou_cadastro():
-    # Corrige nome no menu lateral apenas visualmente
-
     if "modo" not in st.session_state or st.session_state["modo"] not in ["login", "cadastro"]:
         st.session_state["modo"] = "login"
 
@@ -78,7 +76,7 @@ def tela_cadastro():
             elif len(senha) < 6:
                 st.error("A senha deve conter pelo menos 6 dígitos.")
             else:
-                sucesso, mensagem = cadastrar_novo_usuario(nome, cargo, email, senha)
+                sucesso, mensagem = cadastrar_novo_usuario(supabase, nome, cargo, email, senha)
                 if sucesso:
                     st.success(mensagem)
                 else:
