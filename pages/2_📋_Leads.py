@@ -48,23 +48,61 @@ with tabs_leads[0]:
         
         st.markdown("---")
 
-        st.html("<div class='subsubtitle'>Informações do aluno</div>")
+        st.html("<div class='subsubtitle'>Informações do aluno 1</div>")
         col1, col2 = st.columns([2,1])
         with col1:
-            nome_aluno = st.text_input("Nome do aluno")
+            nome_aluno_1 = st.text_input("Nome do aluno", key='nome_aluno_1')
         with col2:
-            idade_aluno = st.number_input("Idade", min_value=0)
+            idade_aluno_1 = st.number_input("Idade", min_value=0, key='idade_aluno_1')
         
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
-            data_nascimento_aluno = st.date_input("Data de nascimento", format="DD/MM/YYYY")
+            data_nascimento_aluno_1 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_1')
         with col2:
-            escola_atual = st.text_input("Escola atual")
+            escola_atual_1 = st.text_input("Escola atual", key='escola_atual_1')
         with col3:
-            serie_interesse = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione", key='cadastrar_serie_interesse')
+            serie_interesse_1 = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione", key='cadastrar_serie_interesse_1')
         
-        especialista_acompanhante = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], placeholder="Selecione", key='cadastrar_especialista_acompanhante')
-        diagnostico = st.text_area("Tem algum diagnóstico? Especifique.")
+        especialista_acompanhante_1 = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], placeholder="Selecione", key='cadastrar_especialista_acompanhante_1')
+        diagnostico_1 = st.text_area("Tem algum diagnóstico? Especifique.", key='diagnostico_aluno_1')
+
+        st.html("<div class='subsubtitle'>Informações do aluno 2</div>")
+        col1, col2 = st.columns([2,1])
+        with col1:
+            nome_aluno_2 = st.text_input("Nome do aluno", key='nome_aluno_2')
+        with col2:
+            idade_aluno_2 = st.number_input("Idade", min_value=0, key='idade_aluno_2')
+        
+        col1, col2, col3 = st.columns([1,1,1])
+        with col1:
+            data_nascimento_aluno_2 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_2')
+        with col2:
+            escola_atual_2 = st.text_input("Escola atual", key='escola_atual_2')
+        with col3:
+            serie_interesse_2 = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione", key='cadastrar_serie_interesse_2')
+        
+        especialista_acompanhante_2 = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], placeholder="Selecione", key='cadastrar_especialista_acompanhante_2')
+        diagnostico_2 = st.text_area("Tem algum diagnóstico? Especifique.", key='diagnostico_aluno_2')
+
+
+        st.html("<div class='subsubtitle'>Informações do aluno 3</div>")
+        col1, col2 = st.columns([2,1])
+        with col1:
+            nome_aluno_3 = st.text_input("Nome do aluno", key='nome_aluno_3')
+        with col2:
+            idade_aluno_3 = st.number_input("Idade", min_value=0, key='idade_aluno_3')
+        
+        col1, col2, col3 = st.columns([1,1,1])
+        with col1:
+            data_nascimento_aluno_3 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_3')
+        with col2:
+            escola_atual_3 = st.text_input("Escola atual", key='escola_atual_3')
+        with col3:
+            serie_interesse_3 = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione", key='cadastrar_serie_interesse_3')
+        
+        especialista_acompanhante_3 = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], placeholder="Selecione", key='cadastrar_especialista_acompanhante_3')
+        diagnostico_3 = st.text_area("Tem algum diagnóstico? Especifique.", key='diagnostico_aluno_3')
+
 
         st.markdown("---")
         
@@ -90,16 +128,37 @@ with tabs_leads[0]:
             "telefone_1": telefone_formatado_1,
             "email_1": email_1,
             "profissao_1": profissao_1,
+
             "nome_responsavel_2": nome_responsavel_2,
             "grau_parentesco_2": grau_parentesco_2,
             "telefone_2": telefone_formatado_2,
             "email_2": email_2,
             "profissao_2": profissao_2,
-            "nome_aluno": nome_aluno,
-            "idade_aluno": idade_aluno,
-            "data_nascimento_aluno": str(data_nascimento_aluno),
-            "escola_atual": escola_atual,
-            "serie_interesse": serie_interesse,
+
+            "nome_aluno_1": nome_aluno_1,
+            "idade_aluno_1": idade_aluno_1,
+            "data_nascimento_aluno_1": str(data_nascimento_aluno_1),
+            "escola_atual_1": escola_atual_1,
+            "serie_interesse_1": serie_interesse_1,
+            "especialista_acompanhante_1": especialista_acompanhante_1,
+            "diagnostico_1": diagnostico_1,
+
+            "nome_aluno_2": nome_aluno_2,
+            "idade_aluno_2": idade_aluno_2,
+            "data_nascimento_aluno_2": str(data_nascimento_aluno_2),
+            "escola_atual_2": escola_atual_2,
+            "serie_interesse_2": serie_interesse_2,
+            "especialista_acompanhante_2": especialista_acompanhante_2,
+            "diagnostico_2": diagnostico_2,
+
+            "nome_aluno_3": nome_aluno_3,
+            "idade_aluno_3": idade_aluno_3,
+            "data_nascimento_aluno_3": str(data_nascimento_aluno_3),
+            "escola_atual_3": escola_atual_3,
+            "serie_interesse_3": serie_interesse_3,
+            "especialista_acompanhante_3": especialista_acompanhante_3,
+            "diagnostico_3": diagnostico_3,
+
             "canal_origem": canal_origem,
             "status_atual": status_atual,
             "profissional_responsavel": profissional_responsavel,
