@@ -33,11 +33,20 @@ with tabs_leads[0]:
         st.markdown("---")
 
         st.html("<div class='subsubtitle'>Informações do aluno</div>")
-        nome_aluno = st.text_input("Nome do aluno")
-        idade_aluno = st.number_input("Idade", min_value=0)
-        data_nascimento_aluno = st.date_input("Data de nascimento", format="DD/MM/YYYY")
-        escola_atual = st.text_input("Escola atual")
-        serie_interesse = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione", key='cadastrar_serie_interesse')
+        col1, col2 = st.columns([2,1])
+        with col1:
+            nome_aluno = st.text_input("Nome do aluno")
+        with col2:
+            idade_aluno = st.number_input("Idade", min_value=0)
+        
+        col1, col2, col3 = st.columns([1,1,1])
+        with col1:
+            data_nascimento_aluno = st.date_input("Data de nascimento", format="DD/MM/YYYY")
+        with col2:
+            escola_atual = st.text_input("Escola atual")
+        with col3:
+            serie_interesse = st.selectbox("Série de interesse", ["Maternal II", "Maternal III", "1° período", "2° período", "1° ano", "2° ano", "3° ano", "4° ano", "5° ano", "6° ano", "7° ano", "8° ano", "9° ano"], placeholder="Selecione", key='cadastrar_serie_interesse')
+        
         especialista_acompanhante = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], placeholder="Selecione", key='cadastrar_especialista_acompanhante')
         diagnostico = st.text_area("Tem algum diagnóstico? Especifique.")
 
@@ -45,10 +54,13 @@ with tabs_leads[0]:
         
         st.html("<div class='subsubtitle'>Informações do status do Lead</div>")
         canal_origem = st.selectbox("Por onde o Lead conheceu a Escola Colibri?", ["Instagram", "WhatsApp", "Facebook", "Linkedin", "Indicação", "Fachada (Passando pela rua)"], placeholder="Selecione", key='cadastrar_canal_origem')
-        status_atual = st.selectbox("Etapa atual do Lead", ["A", "B", "C"], placeholder="Selecione", key='cadastrar_status_atual')
-        profissional_responsavel = st.selectbox("Profissional responsável por essa etapa", ["Fulano", "Ciclano", "Beltrano"], placeholder="Selecione", key='cadastrar_responsavel_nome')
-        lead_finalizado = st.radio("Matrícula realizada?", ["Não", "Sim"], horizontal=True)
-
+        col1, col2, col3 = st.columns([1,1,1])
+        with col1:
+            status_atual = st.selectbox("Etapa atual do Lead", ["A", "B", "C"], placeholder="Selecione", key='cadastrar_status_atual')
+        with col2:
+            profissional_responsavel = st.selectbox("Profissional responsável por essa etapa", ["Fulano", "Ciclano", "Beltrano"], placeholder="Selecione", key='cadastrar_responsavel_nome')
+        with col3:
+            lead_finalizado = st.radio("Matrícula realizada?", ["Não", "Sim"], horizontal=True)
         observacoes = st.text_area("Observações")
 
         st.markdown("---")
