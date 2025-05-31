@@ -33,7 +33,7 @@ with tabs_leads[0]:
         st.html("<div class='subsubtitle'>Informações do responsável 2</div>")
         col1, col2 = st.columns([2,1])
         with col1:
-            nome_responsavel_2 = st.text_input("Nome do responsável", 'nome_responsavel_2')
+            nome_responsavel_2 = st.text_input("Nome do responsável", key='nome_responsavel_2')
         with col2:
             grau_parentesco_2 = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True, key='parentesco_1')
 
