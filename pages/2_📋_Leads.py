@@ -15,12 +15,20 @@ tabs_leads = st.tabs(["Cadastrar", "Visualizar", "Atualizar", "Excluir"])
 with tabs_leads[0]:
     with st.form("form_cadastro_leads", clear_on_submit=True):
         st.html("<div class='subsubtitle'>Informações do responsável</div>")
-        nome_responsavel = st.text_input("Nome do responsável")
-        grau_parentesco = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True)
-        telefone = st.text_input("Telefone de contato")
-        telefone_formatado = formatar_telefone(telefone)
-        email = st.text_input("E-mail")
-        profissao = st.text_input("Profissão")
+        col1, col2 = st.columns([2,1])
+        with col1:
+            nome_responsavel = st.text_input("Nome do responsável")
+        with col2:
+            grau_parentesco = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True)
+
+        col1, col2, col3 = st.columns()
+        with col1:
+            telefone = st.text_input("Telefone de contato")
+            telefone_formatado = formatar_telefone(telefone)
+        with col2:
+            email = st.text_input("E-mail")
+        with col3:
+            profissao = st.text_input("Profissão")
 
         st.markdown("---")
 
