@@ -99,7 +99,7 @@ with tabs_leads[0]:
 with tabs_leads[1]:
     leads_result = buscar_registro("leads", "nome_aluno")
     df_leads = pd.DataFrame(leads_result)
-    df_leads = df_leads.drop(columns=["id"])
+    #df_leads = df_leads.drop(columns=["id"])
     st.dataframe(df_leads, height=500)
 
 
