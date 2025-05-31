@@ -103,7 +103,7 @@ with tabs_leads[0]:
         especialista_acompanhante_3 = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], placeholder="Selecione", key='cadastrar_especialista_acompanhante_3')
         diagnostico_3 = st.text_area("Tem algum diagnóstico? Especifique.", key='diagnostico_aluno_3')
 
-
+        
         st.markdown("---")
         
         st.html("<div class='subsubtitle'>Informações do status do Lead</div>")
@@ -119,7 +119,14 @@ with tabs_leads[0]:
 
         st.markdown("---")
 
-        consentimento_lgpd = st.checkbox("O responsável declara estar ciente e de acordo com o uso dos dados fornecidos para fins de contato, registro e comunicação institucional, conforme a Lei Geral de Proteção de Dados (LGPD).")
+        st.markdown("""
+            **Declaração de Consentimento (LGPD)**  
+            Em observância à Lei nº 13.709/18 - LGPD (Lei Geral de Proteção de Dados), autorizo de forma informada, livre, expressa e consciente que a Escola Colibri realize o tratamento dos dados pessoais e sensíveis fornecidos, incluindo a inclusão destes na lista de alunos com interesse em vagas na instituição e, em caso de matrícula, no cadastro oficial de alunos.  
+            - Estou ciente de que a Escola Colibri não compartilhará os dados com parceiros ou prestadores de serviços, restringindo-se às suas próprias funções e atividades.  
+            - Estou ciente de que a Escola Colibri poderá tomar decisões automatizadas ou não com base nos dados fornecidos.
+            """)
+
+        consentimento_lgpd = st.checkbox("Declaro que li e concordo com o termo de consentimento acima.")
 
         # Criar o dicionário com os dados
         dict_leads = {
@@ -176,11 +183,10 @@ with tabs_leads[0]:
             else:
                 st.error("É necessário o consentimento LGPD para prosseguir.")
 
-with tabs_leads[1]:
-    leads_result = buscar_registro("leads", "nome_aluno")
-    df_leads = pd.DataFrame(leads_result)
+#with tabs_leads[1]:
+    #leads_result = buscar_registro("leads", "nome_aluno")
+    #df_leads = pd.DataFrame(leads_result)
     #df_leads = df_leads.drop(columns=["id"])
-    st.dataframe(df_leads, height=500)
-
+    #st.dataframe(df_leads, height=500)
 
 
