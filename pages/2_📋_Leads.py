@@ -35,7 +35,7 @@ with tabs_leads[0]:
         with col1:
             nome_responsavel_2 = st.text_input("Nome do responsável", key='nome_responsavel_2')
         with col2:
-            grau_parentesco_2 = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True, key='parentesco_1')
+            grau_parentesco_2 = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True, key='parentesco_2')
 
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
