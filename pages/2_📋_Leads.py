@@ -14,22 +14,38 @@ tabs_leads = st.tabs(["Cadastrar", "Visualizar", "Atualizar", "Excluir"])
 
 with tabs_leads[0]:
     with st.form("form_cadastro_leads", clear_on_submit=True):
-        st.html("<div class='subsubtitle'>Informações do responsável</div>")
+        st.html("<div class='subsubtitle'>Informações do responsável 1</div>")
         col1, col2 = st.columns([2,1])
         with col1:
-            nome_responsavel = st.text_input("Nome do responsável")
+            nome_responsavel_1 = st.text_input("Nome do responsável", key='nome_responsavel_1')
         with col2:
-            grau_parentesco = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True)
+            grau_parentesco_1 = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True, key='parentesco_1')
 
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
-            telefone = st.text_input("Telefone de contato")
-            telefone_formatado = formatar_telefone(telefone)
+            telefone_1 = st.text_input("Telefone de contato", key='telefone_1')
+            telefone_formatado_1 = formatar_telefone(telefone_1)
         with col2:
-            email = st.text_input("E-mail")
+            email_1 = st.text_input("E-mail", key='email_1')
         with col3:
-            profissao = st.text_input("Profissão")
+            profissao_1 = st.text_input("Profissão", key='profissao_1')
 
+        st.html("<div class='subsubtitle'>Informações do responsável 2</div>")
+        col1, col2 = st.columns([2,1])
+        with col1:
+            nome_responsavel_2 = st.text_input("Nome do responsável", 'nome_responsavel_2')
+        with col2:
+            grau_parentesco_2 = st.radio("Grau de parentesco", ["Pai", "Mãe", "Outro"], horizontal=True, key='parentesco_1')
+
+        col1, col2, col3 = st.columns([1,1,1])
+        with col1:
+            telefone_2 = st.text_input("Telefone de contato", key='telefone_2')
+            telefone_formatado_2 = formatar_telefone(telefone_2)
+        with col2:
+            email_2 = st.text_input("E-mail", key='email_2')
+        with col3:
+            profissao_2 = st.text_input("Profissão", key='profissao_2')
+        
         st.markdown("---")
 
         st.html("<div class='subsubtitle'>Informações do aluno</div>")
@@ -69,11 +85,16 @@ with tabs_leads[0]:
 
         # Criar o dicionário com os dados
         dict_leads = {
-            "nome_responsavel": nome_responsavel,
-            "grau_parentesco": grau_parentesco,
-            "telefone": telefone_formatado,
-            "email": email,
-            "profissao": profissao,
+            "nome_responsavel_1": nome_responsavel_1,
+            "grau_parentesco_1": grau_parentesco_1,
+            "telefone_1": telefone_formatado_1,
+            "email_1": email_1,
+            "profissao_1": profissao_1,
+            "nome_responsavel_2": nome_responsavel_2,
+            "grau_parentesco_2": grau_parentesco_2,
+            "telefone_2": telefone_formatado_2,
+            "email_2": email_2,
+            "profissao_2": profissao_2,
             "nome_aluno": nome_aluno,
             "idade_aluno": idade_aluno,
             "data_nascimento_aluno": str(data_nascimento_aluno),
