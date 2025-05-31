@@ -57,7 +57,8 @@ with tabs_leads[0]:
         
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
-            data_nascimento_aluno_1 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_1')
+            data_nascimento_aluno_1 = st.date_input("Data de nascimento", format="DD/MM/YYYY",  min_value=datetime.date(1930, 1, 1),
+    max_value=datetime.date.today(), key='data_nascimento_aluno_1')
         with col2:
             escola_atual_1 = st.text_input("Escola atual", key='escola_atual_1')
         with col3:
@@ -75,7 +76,7 @@ with tabs_leads[0]:
         
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
-            data_nascimento_aluno_2 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_2')
+            data_nascimento_aluno_2 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_2', min_value=datetime.date(1930, 1, 1), max_value=datetime.date.today())
         with col2:
             escola_atual_2 = st.text_input("Escola atual", key='escola_atual_2')
         with col3:
@@ -94,7 +95,7 @@ with tabs_leads[0]:
         
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
-            data_nascimento_aluno_3 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_3')
+            data_nascimento_aluno_3 = st.date_input("Data de nascimento", format="DD/MM/YYYY", key='data_nascimento_aluno_3', min_value=datetime.date(1930, 1, 1), max_value=datetime.date.today())
         with col2:
             escola_atual_3 = st.text_input("Escola atual", key='escola_atual_3')
         with col3:
@@ -103,7 +104,7 @@ with tabs_leads[0]:
         especialista_acompanhante_3 = st.selectbox("A criança é acompanhada por algum desses especialistas?", ["Neuropediatra", "Fonoaudióloga", "Terapeuta ocupacional", "Psiquiatra", "Psicopedagogo", "Psicólogo", "Não"], placeholder="Selecione", key='cadastrar_especialista_acompanhante_3')
         diagnostico_3 = st.text_area("Tem algum diagnóstico? Especifique.", key='diagnostico_aluno_3')
 
-        
+
         st.markdown("---")
         
         st.html("<div class='subsubtitle'>Informações do status do Lead</div>")
